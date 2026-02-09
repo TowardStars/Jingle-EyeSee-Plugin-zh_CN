@@ -186,12 +186,12 @@ public class EyeSeePluginPanel {
         mainPanel.setLayout(new GridLayoutManager(6, 1, new Insets(5, 5, 5, 5), -1, -1));
         mainPanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEmptyBorder(), null, TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, null, null));
         enableBox = new JCheckBox();
-        enableBox.setText("Enable EyeSee Measuring Projector");
+        enableBox.setText("开启EyeSee测眼窗口投影");
         mainPanel.add(enableBox, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final Spacer spacer1 = new Spacer();
         mainPanel.add(spacer1, new GridConstraints(5, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final JLabel label1 = new JLabel();
-        label1.setText("<html> <h2>Warning</h2> The EyeSee plugin provides a measuring projector that works without the use of OBS.<br> It's possible this projector will fail to work for any of the following reasons: <ul> <li>Usage of an AMD GPU</li> <li>Being on a Laptop</li> <li>Certain hardware configurations</li> <li>Not being blessed by the Jingle God</li> </ul> If you can't get the EyeSee projector to work, try using an OBS projector (check out the OBS tab). </html>");
+        label1.setText("<html> <h2>警告</h2> EyeSee 插件提供了一个无需使用 OBS 即可工作的测眼窗口投影<br> 该窗口投影可能会由于以下任一原因而无法正常运行： <ul>     <li>使用 AMD 显卡</li>     <li>在笔记本电脑上使用</li>     <li>某些特定的电脑硬件配置</li>     <li>没有获得Jingle之神的眷顾</li> </ul> 如果不能让EyeSee测眼窗口投影正常运行，尝试使用 OBS窗口投影（点击上方OBS选项卡）。  </html>");
         mainPanel.add(label1, new GridConstraints(4, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JSeparator separator1 = new JSeparator();
         mainPanel.add(separator1, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
@@ -199,7 +199,7 @@ public class EyeSeePluginPanel {
         fpsLimitPanel.setLayout(new GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
         mainPanel.add(fpsLimitPanel, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_VERTICAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         final JLabel label2 = new JLabel();
-        label2.setText("FPS Limit:");
+        label2.setText("帧率限制：");
         fpsLimitPanel.add(label2, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         projFpsLimitField = new JTextField();
         projFpsLimitField.setText("");
@@ -209,14 +209,14 @@ public class EyeSeePluginPanel {
         mainPanel.add(positionPanel, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_VERTICAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         positionPanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), null, TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, null, null));
         autoBox = new JCheckBox();
-        autoBox.setText("Automatically Position EyeSee Measuring Projector");
+        autoBox.setText("自动调整EyeSee测眼窗口投影的位置和大小");
         positionPanel.add(autoBox, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         customPositionPanel = new JPanel();
         customPositionPanel.setLayout(new GridLayoutManager(2, 4, new Insets(0, 0, 0, 0), -1, -1));
         positionPanel.add(customPositionPanel, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_VERTICAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         customPositionPanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEmptyBorder(), null, TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, null, null));
         final JLabel label3 = new JLabel();
-        label3.setText("Position:");
+        label3.setText("位置：");
         customPositionPanel.add(label3, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         projPosXField = new JTextField();
         projPosXField.setText("");
@@ -225,7 +225,7 @@ public class EyeSeePluginPanel {
         projPosYField.setText("");
         customPositionPanel.add(projPosYField, new GridConstraints(0, 2, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(30, -1), null, 0, false));
         final JLabel label4 = new JLabel();
-        label4.setText("Size:");
+        label4.setText("大小：");
         customPositionPanel.add(label4, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         projPosWField = new JTextField();
         projPosWField.setText("");
@@ -234,7 +234,7 @@ public class EyeSeePluginPanel {
         projPosHField.setText("");
         customPositionPanel.add(projPosHField, new GridConstraints(1, 2, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(30, -1), null, 0, false));
         applyButton = new JButton();
-        applyButton.setText("Apply");
+        applyButton.setText("应用");
         customPositionPanel.add(applyButton, new GridConstraints(0, 3, 2, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     }
 
